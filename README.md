@@ -5,7 +5,7 @@ Hellen Carolyna Magalhâes Miranda (5086).
 
 ## Sistema de Venda de Produtos 
 
-Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo venda de doces, denominado "Delícias da Hellen". Levando em considereção esse cenário, o objetivo deste trabalho é desenvolver um sistema de venda, assim forma o usuário poderá manter o controle de estoque e registrar as vendas de forma eficiente. A ideia central é facilitar o processo de compra e garantir que o estoque seja atualizado de acordo com as vendas realizadas.
+Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo venda de doces, denominado "Delícias da Hellen". Levando em considereção esse cenário, o objetivo deste trabalho é desenvolver um sistema de venda, dessa forma, o usuário poderá manter o controle de estoque e registrar as vendas de forma eficiente. A ideia central é facilitar o processo de compra e garantir que o estoque seja atualizado de acordo com as vendas realizadas.
 
 ### Objetivos:
 
