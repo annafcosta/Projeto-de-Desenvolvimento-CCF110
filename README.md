@@ -1,7 +1,7 @@
 # Projeto de Desenvolvimento
 
 *Autores:* Anna Lúisa Ferreira Costa (4409),
-Hellen Carolyna Magalhâes Miranda (5086).
+Hellen Carolyna Magalhães Miranda (5086).
 
 ## Sistema de Venda de Produtos 
 
