@@ -42,4 +42,8 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 
 ### ⚪ Autores
 
-Anna Lúisa Ferreira Costa (4409) e Hellen Carolyna Magalhães Miranda (5086).
+Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
+
+Hellen Carolyna Magalhães Miranda (5086). [[User-GitHub]](https://github.com/HellenCarolyna)
+
+
