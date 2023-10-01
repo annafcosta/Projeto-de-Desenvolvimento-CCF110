@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main()
 {
@@ -7,8 +8,15 @@ int main()
 
     int max_produto;
 
-    printf("Insira a quantidade de produtos produzidos esse mês: ");
-    scanf("%d", &max_produto);
+    do {
+        printf("Insira a quantidade de produtos produzidos esse mês: ");
+        scanf("%d", &max_produto);
+
+        // Verificação para números negativos
+        if (max_produto < 0) {
+            printf("Por favor, insira um número não negativo.\n");
+        }
+    } while (max_produto < 0);
 
     // Declarando as variáveis para os produtos:
 
