@@ -41,24 +41,30 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 </div>
 
 ### 🟣 Objetivos:
+___
 
 * *Eficiência Operacional:* O principal objetivo do sistema é melhorar a eficiência operacional, automatizando tarefas repetitivas, como controle de estoque e registro de vendas;
+
 * *Precisão do Estoque:* Garantir que o estoque seja mantido atualizado;
+
 * *Controle Financeiro:* Um dos objetivos do sistema é auxiliar os usuários a acompanharem suas receitas de vendas.
 
-### 🟢 Implementações Existentes
 
+### 🟢 Implementações Existentes
+___
 * *Cadastro de Vendas:* Até o momento, o sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços;
 
-### 🟡 Futuras Implementações 
 
+### 🟡 Futuras Implementações 
+___
 * *Registro de Vendas:* O objetivo, é definir uma estrutura para o sistema de registro de vendas, incluindo a possibilidade de informar ao usuário o lucro (do mês respectivo as vendas realizadas) das vendas;
+
 * *Visualização do estoque:* Por meio da escolha do menu, será possível visualizar os produtos em estoque;
 
 ### 🔵 Descrição de funcionamento
-
+___
 ### ⚪ Autores
-
+___
 Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
 
 Hellen Carolyna Magalhães Miranda (5086). [[User-GitHub]](https://github.com/HellenCarolyna)
