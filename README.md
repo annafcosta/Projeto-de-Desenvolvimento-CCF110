@@ -48,10 +48,7 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 
 ### 🟢 Implementações Existentes
 
-
-
-
-
+* *Cadastro de Vendas:* Até o momento, o sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços;
 
 ### 🟡 Futuras Implementações 
 
