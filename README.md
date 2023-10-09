@@ -12,13 +12,10 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 <!-- Seu conteúdo para a Objetivos -->
 </div>
 
-
 🟢 [Implementações Existentes](#implemen-4)
 <div id="implemen-4">
 <!-- Seu conteúdo para Autores -->
 </div>
-
-
 
 🟡  [Futuras Implementações](#implementar-3)
 
@@ -26,13 +23,11 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 <!-- Seu conteúdo para Autores -->
 </div>
 
-
 🔵 [Descrição de Funcionamento](#descrição-2)
 
 <div id="descrição-2">
 <!-- Seu conteúdo para Descrição de Funcionamento -->
 </div>
-
 
 ⚪ [Autores](#autores-3)
 
