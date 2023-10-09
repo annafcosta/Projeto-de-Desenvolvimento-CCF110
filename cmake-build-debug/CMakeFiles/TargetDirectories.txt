@@ -1,0 +1,3 @@
+/home/anna/PROG/Projeto-de-Desenvolvimento-CCF110/cmake-build-debug/CMakeFiles/Projeto_de_Desenvolvimento_CCF110.dir
+/home/anna/PROG/Projeto-de-Desenvolvimento-CCF110/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/anna/PROG/Projeto-de-Desenvolvimento-CCF110/cmake-build-debug/CMakeFiles/rebuild_cache.dir
