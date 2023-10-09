@@ -48,11 +48,9 @@ ___
 ### 🟢 Implementações Existentes
 ___
 
-* *Menu Interativo:* O menu interativo foi desenvolvido de maneira que, a navegação do usuário seja intuitiva. Além desse aspecto, foi adionado cores para personalizar as opções do meno, facilitando assim a visualização e escolha do usuário;
+* *Menu Interativo:* O menu interativo foi desenvolvido de maneira que a navegação do usuário seja intuitiva. Além desse aspecto, foi adicionado cores para personalização das opções do menu, facilitando assim, a visualização e escolha do usuário;
   
-* *Cadastro de Vendas:* O sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços;
-
-
+* *Cadastro de Vendas:* O sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços.
 
 ### 🟡 Futuras Implementações 
 ___
