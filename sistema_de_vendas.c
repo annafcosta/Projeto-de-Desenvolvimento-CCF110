@@ -6,7 +6,7 @@ int main()
 
     // Declarando as variáveis para os produtos fora do loop:
     int max_produto;
-    char nome_produto[max_produto][50];
+    char nome_produto[max_produto][50]; // "50" indica uma max de 50 caracteres de comprimento.
     float valor_produto[max_produto];
     int quantidade_produto[max_produto];
     int num_produtos = 0;
@@ -41,7 +41,7 @@ int main()
 
                 do
                 {
-                    printf("Insira a quantidade de produtos produzidos esse mês: ");
+                    printf("\nInsira a quantidade de produtos produzidos esse mês: ");
                     scanf("%d", &max_produto);
 
                     // Verificação para números negativos
@@ -51,14 +51,14 @@ int main()
                     }
                 } while (max_produto < 0);
 
+                // NOME DO PRODUTO:
                 for (int i = 0; i < max_produto; ++i)
                 {
                     printf("Informe o nome do produto: ");
                     scanf("%s", nome_produto[num_produtos]);
 
-                    // Verificação para valor do produto não ser negativo;
                     do
-                    {
+                    {   // VALOR DO PRODUTO:
                         printf("Informe o valor do produto: ");
                         scanf("%f", &valor_produto[num_produtos]);
 
@@ -66,10 +66,10 @@ int main()
                         {
                             printf("O valor do produto não pode ser negativo. Tente novamente.\n");
                         }
-
+                        // Verificação para quantidade do produto não ser negativa;
                     } while (valor_produto[num_produtos] < 0);
 
-                    // Verificação para quantidade do produto não ser negativa;
+                    //  QUANTIDADE DE PRODUTOS
                     do
                     {
                         printf("Informe a quantidade em estoque: ");
@@ -89,8 +89,19 @@ int main()
 
                 break;
 
-            case 2: // Adicionar a lógica, futuramente:
+            case 2:
+
+                // VISUALIZAÇÃO DE PRODUTOS
+                for (int i = 0; i < num_produtos; ++i)
+                {
+                    printf("PRODUTO %d:\n", i + 1);
+                    printf("\033[35mNOME: %s\033[0m\n", nome_produto[i]);
+                    printf("\033[34mVALOR: %.2f\033[0m\n", valor_produto[i]);
+                    printf("QUANTIDADE: %d\033[0m\n", quantidade_produto[i]);
+                    printf("\n");
+                }
                 break;
+
             case 3:
                 break;
             case 4:
