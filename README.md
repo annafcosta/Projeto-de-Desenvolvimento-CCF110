@@ -12,13 +12,10 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 <!-- Seu conteúdo para a Objetivos -->
 </div>
 
-
 🟢 [Implementações Existentes](#implemen-4)
 <div id="implemen-4">
 <!-- Seu conteúdo para Autores -->
 </div>
-
-
 
 🟡  [Futuras Implementações](#implementar-3)
 
@@ -26,13 +23,11 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 <!-- Seu conteúdo para Autores -->
 </div>
 
-
 🔵 [Descrição de Funcionamento](#descrição-2)
 
 <div id="descrição-2">
 <!-- Seu conteúdo para Descrição de Funcionamento -->
 </div>
-
 
 ⚪ [Autores](#autores-3)
 
@@ -52,8 +47,10 @@ ___
 
 ### 🟢 Implementações Existentes
 ___
-* *Cadastro de Vendas:* Até o momento, o sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços;
 
+* *Menu Interativo:* O menu interativo foi desenvolvido de maneira que a navegação do usuário seja intuitiva. Além desse aspecto, foi adicionado cores para personalização das opções do menu, facilitando assim, a visualização e escolha do usuário;
+  
+* *Cadastro de Vendas:* O sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços.
 
 ### 🟡 Futuras Implementações 
 ___
