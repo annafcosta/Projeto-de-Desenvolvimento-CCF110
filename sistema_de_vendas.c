@@ -35,86 +35,80 @@ int main()
         printf("\n\n Digite a opção desejada: ");
         scanf("%d", &opcao);
 
-        switch (opcao)
+        if (opcao == 1) // CADASTRO DOS PRODUTOS
         {
-            case 1: // CADASTRO DOS PRODUTOS
+            do
+            {
+                printf("\nInsira a quantidade de produtos produzidos esse mês: ");
+                scanf("%d", &max_produto);
+
+                // Verificação para números negativos
+                if (max_produto < 0)
+                {
+                    printf("Por favor, insira um número não negativo.\n");
+                }
+            } while (max_produto < 0);
+
+            // NOME DO PRODUTO:
+            for (int i = 0; i < max_produto; ++i)
+            {
+                printf("Informe o nome do produto: ");
+                scanf("%s", nome_produto[num_produtos]);
 
                 do
-                {
-                    printf("\nInsira a quantidade de produtos produzidos esse mês: ");
-                    scanf("%d", &max_produto);
+                {   // VALOR DO PRODUTO:
+                    printf("Informe o valor do produto: ");
+                    scanf("%f", &valor_produto[num_produtos]);
 
-                    // Verificação para números negativos
-                    if (max_produto < 0)
+                    if (valor_produto[num_produtos] < 0) // Verificação para números negativos;
                     {
-                        printf("Por favor, insira um número não negativo.\n");
+                        printf("O valor do produto não pode ser negativo. Tente novamente.\n");
                     }
-                } while (max_produto < 0);
+                } while (valor_produto[num_produtos] < 0);
 
-                // NOME DO PRODUTO:
-                for (int i = 0; i < max_produto; ++i)
+                do // QUANTIDADE DE PRODUTOS
                 {
-                    printf("Informe o nome do produto: ");
-                    scanf("%s", nome_produto[num_produtos]);
+                    printf("Informe a quantidade em estoque: ");
+                    scanf("%d", &quantidade_produto[num_produtos]);
 
-                    do
-                    {   // VALOR DO PRODUTO:
-                        printf("Informe o valor do produto: ");
-                        scanf("%f", &valor_produto[num_produtos]);
-
-                        if (valor_produto[num_produtos] < 0)
-                        {
-                            printf("O valor do produto não pode ser negativo. Tente novamente.\n");
-                        }
-                        // Verificação para quantidade do produto não ser negativa;
-                    } while (valor_produto[num_produtos] < 0);
-
-                    //  QUANTIDADE DE PRODUTOS
-                    do
+                    if (quantidade_produto[num_produtos] < 0) // Verificação para números negativos;
                     {
-                        printf("Informe a quantidade em estoque: ");
-                        scanf("%d", &quantidade_produto[num_produtos]);
+                        printf("A quantidade do produto não pode ser negativa. Tente novamente.\n");
+                    }
 
-                        if (quantidade_produto[num_produtos] < 0)
-                        {
-                            printf("A quantidade do produto não pode ser negativa. Tente novamente.\n");
-                        }
+                } while (quantidade_produto[num_produtos] < 0);
+                num_produtos++;
 
-                    } while (quantidade_produto[num_produtos] < 0);
-                    num_produtos++;
-
-                    printf("\033[0;33mProduto adicionado com sucesso!\n");
-                    printf("\033[0m");
-                }
-
-                break;
-
-            case 2:
-
-                // VISUALIZAÇÃO DE PRODUTOS
-                for (int i = 0; i < num_produtos; ++i)
-                {
-                    printf("PRODUTO %d:\n", i + 1);
-                    printf("\033[35mNOME: %s\033[0m\n", nome_produto[i]);
-                    printf("\033[34mVALOR: %.2f\033[0m\n", valor_produto[i]);
-                    printf("QUANTIDADE: %d\033[0m\n", quantidade_produto[i]);
-                    printf("\n");
-                }
-                break;
-
-            case 3:
-                break;
-            case 4:
-                break;
-            case 0:
-                break;
-
-            default:
-                printf(" \033[31mEscolha uma opção válida!! ");
+                printf("\033[0;33mProduto adicionado com sucesso!\n");
                 printf("\033[0m");
+            }
+        } else if (opcao == 2) // VISUALIZAÇÃO DE PRODUTOS
+        {
+            for (int i = 0; i < num_produtos; ++i)
+            {
+                printf("PRODUTO %d:\n", i + 1);
+                printf("\033[35mNOME: %s\033[0m\n", nome_produto[i]);
+                printf("\033[34mVALOR: %.2f\033[0m\n", valor_produto[i]);
+                printf("QUANTIDADE: %d\033[0m\n", quantidade_produto[i]);
+                printf("\n");
+            }
+        } else if (opcao == 3)
+        {
+            // ... código para o caso 3 ...
+        } else if (opcao == 4)
+        {
+            // ... código para o caso 4 ...
+        } else if (opcao == 0)
+        {
+            // ... código para o caso 0 ...
+        } else
+        {
+            printf(" \033[31mEscolha uma opção válida!! ");
+            printf("\033[0m");
         }
 
     } while (opcao != 0);
+
 
 // REGISTRO DE VENDAS:
 
