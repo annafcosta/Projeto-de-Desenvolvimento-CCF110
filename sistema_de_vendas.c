@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
     int opcao;
 
     // Declarando as variáveis para os produtos fora do loop:
-    int max_produto;
-    char nome_produto[max_produto][50]; // "50" indica uma max de 50 caracteres de comprimento.
+    int max_produto = 1;
+    char nome_produto[max_produto][50];
     float valor_produto[max_produto];
     int quantidade_produto[max_produto];
     int num_produtos = 0;
@@ -26,7 +27,7 @@ int main()
         printf("\n\t• Cadastrar nova venda \033[34m| Digite 3: ");
         printf("\033[0m");
 
-        printf("\n\t• Listar vendas \033[34m| Digite 5: ");
+        printf("\n\t• Listar vendas \033[34m| Digite 4: ");
         printf("\033[0m");
 
         printf("\n\t• Sair \033[34m| Digite 0: ");
@@ -35,61 +36,65 @@ int main()
         printf("\n\n Digite a opção desejada: ");
         scanf("%d", &opcao);
 
-        if (opcao == 1) // CADASTRO DOS PRODUTOS
+
+        // CADASTRO DOS PRODUTOS
+        if (opcao == 1)
         {
+            // NOME DO PRODUTO:
+            for (int i = 0; i < max_produto; i++)
+            {
+                printf("\nInforme o nome do produto: ");
+                getchar(); // Consumir a nova linha pendente
+                fgets(nome_produto[num_produtos], sizeof(nome_produto[i]), stdin);
+                nome_produto[num_produtos][strcspn(nome_produto[i], "\n")] = '\0';
+            }
+
+            // VALOR DO PRODUTO:
             do
             {
-                printf("\nInsira a quantidade de produtos produzidos esse mês: ");
-                scanf("%d", &max_produto);
-
-                // Verificação para números negativos
-                if (max_produto < 0)
+                for (int i = 0; i < max_produto; i++)
                 {
-                    printf("Por favor, insira um número não negativo.\n");
-                }
-            } while (max_produto < 0);
 
-            // NOME DO PRODUTO:
-            for (int i = 0; i < max_produto; ++i)
-            {
-                printf("Informe o nome do produto: ");
-                scanf("%s", nome_produto[num_produtos]);
-
-                do
-                {   // VALOR DO PRODUTO:
                     printf("Informe o valor do produto: ");
-                    scanf("%f", &valor_produto[num_produtos]);
+                    scanf("%f", &valor_produto[i]);
 
-                    if (valor_produto[num_produtos] < 0) // Verificação para números negativos;
+                    if (valor_produto[i] < 0) // Verificação para números negativos;
                     {
                         printf("O valor do produto não pode ser negativo. Tente novamente.\n");
                     }
-                } while (valor_produto[num_produtos] < 0);
 
-                do // QUANTIDADE DE PRODUTOS
+
+                }
+
+            } while (valor_produto[num_produtos] < 0);
+
+            do // QUANTIDADE DE PRODUTOS
+            {
+                for (int i = 0; i < max_produto; i++)
                 {
                     printf("Informe a quantidade em estoque: ");
-                    scanf("%d", &quantidade_produto[num_produtos]);
+                    scanf("%d", &quantidade_produto[i]);
 
-                    if (quantidade_produto[num_produtos] < 0) // Verificação para números negativos;
+                    if (quantidade_produto[i] < 0) // Verificação para números negativos;
                     {
                         printf("A quantidade do produto não pode ser negativa. Tente novamente.\n");
                     }
+                }
 
-                } while (quantidade_produto[num_produtos] < 0);
-                num_produtos++;
+            } while (quantidade_produto[num_produtos] < 0);
+            num_produtos++;
 
-                printf("\033[0;33mProduto adicionado com sucesso!\n");
-                printf("\033[0m");
-            }
+            printf("\033[0;33mProduto adicionado com sucesso!\n");
+            printf("\033[0m");
+
         } else if (opcao == 2) // VISUALIZAÇÃO DE PRODUTOS
         {
             for (int i = 0; i < num_produtos; ++i)
             {
-                printf("PRODUTO %d:\n", i + 1);
+                printf("\n\033[1;32mPRODUTO %d\033[0m:\n", i + 1);
                 printf("\033[35mNOME: %s\033[0m\n", nome_produto[i]);
-                printf("\033[34mVALOR: %.2f\033[0m\n", valor_produto[i]);
-                printf("QUANTIDADE: %d\033[0m\n", quantidade_produto[i]);
+                printf("\033[34mVALOR: R$%.2f\033[0m\n", valor_produto[i]);
+                printf("\033[38;5;208mQUANTIDADE: %d\033[0m\n", quantidade_produto[i]);
                 printf("\n");
             }
         } else if (opcao == 3)
@@ -108,21 +113,6 @@ int main()
         }
 
     } while (opcao != 0);
-
-
-// REGISTRO DE VENDAS:
-
-//    int max_vendas;
-//
-//    printf("Insira a quantidade máxima de produtos a serem vendidos nesse mês: ");
-//    scanf("%d", &max_vendas);
-//
-//    // Declarando as variáveis para registrar as vendas:
-//
-//    int nome_vendidos[max_vendas];
-//    int qtd_vendidas[max_vendas];
-//    float totalVenda[max_vendas];
-//    int num_vendas = 0;
 
     return 0;
 }
