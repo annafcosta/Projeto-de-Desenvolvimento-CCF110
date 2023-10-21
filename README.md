@@ -56,7 +56,7 @@ ___
 
 ### 🟡 Futuras Implementações 
 ___
-* *Registro de Vendas:* O objetivo, é definir uma estrutura para o sistema de registro de vendas, incluindo a possibilidade de informar ao usuário o lucro (do mês respectivo as vendas realizadas) das vendas;
+* *Registro de Vendas:* O objetivo é definir uma estrutura para o sistema de registro de vendas, incluindo a possibilidade de informar ao usuário o lucro (do mês respectivo as vendas realizadas) das vendas;
 
 * *Visualização do estoque:* Por meio da escolha do menu, será possível visualizar os produtos em estoque;
 
