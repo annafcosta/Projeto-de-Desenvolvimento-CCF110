@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int max_produto = 2;
+//Definir a quantidade máxima de produtos que serão cadastrados:
+int max_produto = 1;
 
 int main()
 {
@@ -154,7 +155,7 @@ int main()
 
                     // Imprimir o valor total da venda
                     printf("\033[0;33mVenda registrada com sucesso!\n");
-                    printf("\033[0;33mValor da venda: R$ %.2f\n", valor_total_venda);
+                    printf("\033[34mValor da venda: R$ %.2f\n", valor_total_venda);
                     printf("\033[0m");
                 } else
                 {
