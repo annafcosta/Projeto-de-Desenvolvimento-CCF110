@@ -51,8 +51,10 @@ ___
 * *Menu Interativo:* O menu interativo foi desenvolvido de maneira que a navegação do usuário seja intuitiva. Além desse aspecto, foi adicionado cores para personalização das opções do menu, facilitando assim, a visualização e escolha do usuário. Abaixo estão as opções válidas, até o momento, para o Menu;
   * Cadastro de produtos no estoque;
   * Visualização de produtos;
+  * Registro de Vendas;
   
-* *Cadastro de Vendas:* O sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, assim como as suas respectivas quantidades e preços.
+* *Cadastro de Produtos:* O sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, o código do produto e suas respectivas quantidades e preços.
+* *Registro de Vendas:* Recentemente, realizou-se uma implementação parcial do registro de vendas. Dessa forma, é possível registrar a venda de um produto por meio de seu código, demonstrando também, a visualização do valor total gerado pela venda.
 
 ### 🟡 Futuras Implementações 
 ___
@@ -63,7 +65,7 @@ ___
 ### 🔵 Descrição de funcionamento
 ___
 ### ⚪ Autores
-___
+
 Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
 
 Hellen Carolyna Magalhães Miranda (5086). [[User-GitHub]](https://github.com/HellenCarolyna)
