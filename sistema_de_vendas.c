@@ -24,19 +24,19 @@ int main()
         printf("\n\t• Cadastrar novo produto no estoque \033[34m| Digite 1: "); // Código de escape ANSI para cor azul
         printf("\033[0m");
 
-        printf("\n\t• Visualizar produtos no estoque \033[34m| Digite 2: ");
+        printf("\n\t• Visualizar produtos no estoque \033[34m\t| Digite 2: ");
         printf("\033[0m");
 
-        printf("\n\t• Cadastrar nova venda \033[34m| Digite 3: ");
+        printf("\n\t• Cadastrar nova venda \033[34m\t\t\t\t| Digite 3: ");
         printf("\033[0m");
 
-        printf("\n\t• Listar vendas \033[34m| Digite 4: ");
+        printf("\n\t• Listar vendas \033[34m\t\t\t\t\t| Digite 4: ");
         printf("\033[0m");
 
-        printf("\n\t• Sair \033[34m| Digite 0: ");
+        printf("\n\t• Sair \033[34m\t\t\t\t\t\t\t\t| Digite 0: ");
         printf("\033[0m");
 
-        printf("\n\n Digite a opção desejada: ");
+        printf("\n\n => Digite a opção desejada: ");
         scanf("%d", &opcao);
 
         // CADASTRO DOS PRODUTOS
@@ -49,7 +49,6 @@ int main()
                 getchar(); // Consumir a nova linha pendente
                 fgets(nome_produto[i], sizeof(nome_produto[i]) + 1, stdin);
                 nome_produto[i][strcspn(nome_produto[i], "\n")] = '\0';
-                printf("%s \n", nome_produto[i]);
             }
 
             // CÓDIGO DO PRODUTO:
@@ -110,11 +109,11 @@ int main()
         {
             for (int i = 0; i < max_produto; ++i)
             {
-                printf("\n\033[1;32mPRODUTO %d\033[0m:\n", i + 1);
-                printf("\033[35mNOME: %s\033[0m\n", nome_produto[i]);
-                printf("\033[34mCÓDIGO: %d \033[0m\n", codigo_produto[i]);
-                printf("\033[31mVALOR: R$ %.2f \033[0m\n", valor_produto[i]);
-                printf("\033[38;5;208mQUANTIDADE: %d\033[0m\n", quantidade_produto[i]);
+                printf("\n\033[1;32mPRODUTO %d \033[0m\n", i + 1);
+                printf("\033[35mNOME       \033[0m| %s\n", nome_produto[i]);
+                printf("\033[34mCÓDIGO     \033[0m| %d\n", codigo_produto[i]);
+                printf("\033[31mVALOR      \033[0m| R$ %.2f\n", valor_produto[i]);
+                printf("\033[38;5;208mQUANTIDADE \033[0m| %d\n", quantidade_produto[i]);
                 printf("\n");
             }
         }
