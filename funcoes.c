@@ -1,11 +1,34 @@
 #include "cadastros.h"
 
-// CADASTRO DE PRODUTOS:
-
-void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_produtos) 
+// MENU
+void exibir_menu()
 {
-    
-    for (int i = 0; i < max_produto; i++) {
+    printf("\033[35m");  // Text color (Rosa)
+    printf("\n~~~~~~~~~~~~~~~~~~~~| DELÍCIAS DA HELLEN |~~~~~~~~~~~~~~~~~~~~\n");
+    printf("\033[0m");   // Resetar a cor para o padrão
+
+    printf("\n\t• Cadastrar novo produto no estoque \033[34m\t| Digite 1 ");
+    printf("\033[0m");
+
+    printf("\n\t• Visualizar produtos no estoque \033[34m\t| Digite 2 ");
+    printf("\033[0m");
+
+    printf("\n\t• Cadastrar nova venda \033[34m\t\t\t| Digite 3 ");
+    printf("\033[0m");
+
+    printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 4 ");
+    printf("\033[0m");
+
+    printf("\n\t• Sair \033[34m\t\t\t\t\t| Digite 0\n");
+    printf("\033[0m");
+}
+
+// CADASTRO DE PRODUTOS:
+void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_produtos)
+{
+
+    for (int i = 0; i < max_produto; i++)
+    {
         printf("\nInforme o nome do produto %d: ", i + 1);
         getchar(); // Consumir a nova linha pendente
         fgets(produtos[i].nome, sizeof(produtos[i].nome), stdin);
@@ -30,10 +53,12 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
 
 // VISUALIZAR PRODUTOS
 
-void visualizar_produtos(Cadastro_produto *produtos, int num_produtos) {
+void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
+{
     printf("\n~~~~~~~~~~~~~~~ PRODUTOS CADASTRADOS ~~~~~~~~~~~~~~~\n");
 
-    for (int i = 0; i < num_produtos; ++i) {
+    for (int i = 0; i < num_produtos; ++i)
+    {
         printf("\n\033[1;32mPRODUTO %d \033[0m\n", i + 1);
         printf("\033[35mNOME       \033[0m| %s\n", produtos[i].nome);
         printf("\033[34mCÓDIGO     \033[0m| %d\n", produtos[i].codigo);
@@ -45,27 +70,27 @@ void visualizar_produtos(Cadastro_produto *produtos, int num_produtos) {
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 }
 
-
 // CADASTRO DE VENDAS:
-
 // Verificando a validade do código do produto
-int verificar_codigo_produto(int codigo, Cadastro_produto *produtos, int num_produtos) {
-    for (int i = 0; i < num_produtos; i++) {
-        if (produtos[i].codigo == codigo) {
+int verificar_codigo_produto(int codigo, Cadastro_produto *produtos, int num_produtos)
+{
+    for (int i = 0; i < num_produtos; i++)
+    {
+        if (produtos[i].codigo == codigo)
+        {
             return i; // Retorna o índice se o código for válido
         }
     }
     return -1; // Retorna -1 se o código não for válido
 }
 
-
-void atualizar_quantidade_produto(Cadastro_produto *produtos, int indice, int quantidade) {
+void atualizar_quantidade_produto(Cadastro_produto *produtos, int indice, int quantidade)
+{
     produtos[indice].quantidade -= quantidade;
 }
 
-
 void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
-                    int produto_encontrado, int quantidade_vendida, int *num_vendas) 
+                     int produto_encontrado, int quantidade_vendida, int *num_vendas)
 {
     atualizar_quantidade_produto(produtos, produto_encontrado, quantidade_vendida);
 
@@ -79,42 +104,51 @@ void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
     (*num_vendas)++;
 }
 
-
 // Função para cadastrar uma venda
 void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
-                    Cadastro_venda *vendas, int max_vendas, int *num_vendas) {
+                     Cadastro_venda *vendas, int max_vendas, int *num_vendas)
+{
 
     int continuar = 1;
 
-    while (continuar) {
+    while (continuar)
+    {
         int codigo_venda;
         int quantidade_vendida;
 
         printf("\nInforme o código do produto vendido (ou 0 para encerrar): ");
         scanf("%d", &codigo_venda);
 
-        if (codigo_venda == 0) {
-            continuar = 0;  
-        } else {
+        if (codigo_venda == 0)
+        {
+            continuar = 0;
+        } else
+        {
             int produto_encontrado = verificar_codigo_produto(codigo_venda, produtos, num_produtos);
 
-            if (produto_encontrado != -1) {
+            if (produto_encontrado != -1)
+            {
                 printf("Informe a quantidade vendida: ");
                 scanf("%d", &quantidade_vendida);
 
-                if (quantidade_vendida <= produtos[produto_encontrado].quantidade) {
+                if (quantidade_vendida <= produtos[produto_encontrado].quantidade)
+                {
                     // Verificar se o número de vendas não ultrapassa o limite máximo
-                    if (*num_vendas < max_vendas) {
+                    if (*num_vendas < max_vendas)
+                    {
                         processar_venda(produtos, vendas, produto_encontrado, quantidade_vendida, num_vendas);
-                    } else {
+                    } else
+                    {
                         printf("\033[31mLimite máximo de vendas atingido.\n");
                         printf("\033[0m");
                     }
-                } else {
+                } else
+                {
                     printf("\033[31mQuantidade insuficiente em estoque para realizar a venda.\n");
                     printf("\033[0m");
                 }
-            } else {
+            } else
+            {
                 printf("\033[31mProduto não encontrado. Verifique o código do produto.\n");
                 printf("\033[0m");
             }
@@ -122,13 +156,14 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
     }
 }
 
-
 // VISUALIZAR VENDAS:
 
-void visualizar_vendas(Cadastro_venda *vendas, int num_vendas) {
+void visualizar_vendas(Cadastro_venda *vendas, int num_vendas)
+{
     printf("\n~~~~~~~~~~~~~~~ VENDAS REALIZADAS ~~~~~~~~~~~~~~~\n");
 
-    for (int i = 0; i < num_vendas; ++i) {
+    for (int i = 0; i < num_vendas; ++i)
+    {
         printf("\n\033[1;32mVENDA %d \033[0m\n", i + 1);
         printf("\033[34mCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
         printf("\033[38;5;208mQUANTIDADE VENDIDA \033[0m| %d\n", vendas[i].quantidade_vendida);
