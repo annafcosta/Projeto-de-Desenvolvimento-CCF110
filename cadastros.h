@@ -1,3 +1,6 @@
+#ifndef CADASTROS_H
+#define CADASTROS_H
+
 // Definir a struct para representar um produto
 typedef struct
 {
@@ -30,3 +33,5 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                     Cadastro_venda *vendas, int max_vendas, int *num_vendas);
 
 void visualizar_vendas(Cadastro_venda *vendas, int num_vendas);
+
+#endif
