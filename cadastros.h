@@ -1,28 +1,32 @@
-// Definição das Structs
-
 // Definir a struct para representar um produto
-struct cadastro_produto {
+typedef struct
+{
     char nome[50];
     float valor;
     int codigo;
     int quantidade;
-};
+} Cadastro_produto;
 
 // Definir a struct para representar uma venda
-struct cadastro_venda {
+typedef struct
+ {
     int codigo_produto_vendido;
     int quantidade_vendida;
     float valor_total;
-};
+} Cadastro_venda;
 
-void cadastrar_produtos(struct cadastro_produto *produtos, int max_produto, int *num_produtos);
+void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_produtos);
 
-int verificar_codigo_produto(int codigo, struct cadastro_produto *produtos, int num_produtos);
+void visualizar_produtos(Cadastro_produto *produtos, int num_produtos);
 
-void processar_venda(struct cadastro_produto *produtos, struct cadastro_venda *vendas,
+void atualizar_quantidade_produto(Cadastro_produto *produtos, int indice, int quantidade);
+
+int verificar_codigo_produto(int codigo, Cadastro_produto *produtos, int num_produtos);
+
+void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
                     int produto_encontrado, int quantidade_vendida, int *num_vendas);
 
-void cadastrar_venda(struct cadastro_produto *produtos, int num_produtos,
-                    struct cadastro_venda *vendas, int max_vendas, int *num_vendas);
+void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
+                    Cadastro_venda *vendas, int max_vendas, int *num_vendas);
 
-void visualizar_vendas(struct cadastro_venda *vendas, int num_vendas);
+void visualizar_vendas(Cadastro_venda *vendas, int num_vendas);

@@ -2,17 +2,18 @@
 #include <string.h>
 #include <stdlib.h>
 #include "cadastros.h"
+#include "funcoes.c"
 
 //Definir a quantidade máxima de produtos que serão cadastrados:
-int max_produto = 3;
-int max_vendas = 3;
+int max_produto = 1;
+int max_vendas = 1;
 
 int main()
 {
     int opcao;
 
-    struct cadastro_produto produtos[max_produto];
-    struct cadastro_venda vendas[max_vendas];
+    Cadastro_produto produtos[max_produto];
+    Cadastro_venda vendas[max_vendas];
     int num_produtos = 0;
     int num_vendas = 0;
 
@@ -31,39 +32,37 @@ int main()
         printf("\n\t• Cadastrar nova venda \033[34m\t\t\t\t| Digite 3: ");
         printf("\033[0m");
 
-        printf("\n\t• Listar vendas \033[34m\t\t\t\t\t| Digite 4: ");
+        printf("\n\t• Listar vendas \033[34m\t\t| Digite 4: ");
         printf("\033[0m");
 
-        printf("\n\t• Sair \033[34m\t\t\t\t\t\t\t\t| Digite 0: ");
+        printf("\n\t• Sair \033[34m\t\t| Digite 0: ");
         printf("\033[0m");
 
         printf("\n\n => Digite a opção desejada: ");
         scanf("%d", &opcao);
 
     // CADASTRO DOS PRODUTOS
-        if (opcao == 1) {
-            cadastrar_produtos(&produtos, max_produto, &num_produtos);
+        if (opcao == 1) 
+        {
+            cadastrar_produtos(produtos, max_produto, &num_produtos);
         }
 
     // VISUALIZAÇÃO DE PRODUTOS
-       //else if (opcao == 2){}
+       else if (opcao == 2)
+       {
+            visualizar_produtos(produtos, num_produtos);
+       }
 
-        
     // CADASTRO DE VENDAS:
-        else if (opcao == 3) {
-            cadastrar_venda(&produtos, &vendas, num_produtos, max_produto, num_vendas);
-
-        } 
+       //else if (opcao == 3) {cadastrar_venda(&produtos, &vendas, num_produtos, max_produto, num_vendas);} 
     
     // VISUALIZAR VENDAS
-        else if (opcao == 4)
-        {
-            visualizar_vendas(&vendas, num_vendas);
-        } 
+       // else if (opcao == 4){    visualizar_vendas(&vendas, num_vendas);} 
         
         else if (opcao == 0)
         {
-           
+           printf("Saída realizada com sucesso!");
+           break; 
         } 
         
         else
