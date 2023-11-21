@@ -35,6 +35,7 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 <!-- Seu conteúdo para Autores -->
 </div>
 
+___
 ### 🟣 Objetivos:
 ___
 
