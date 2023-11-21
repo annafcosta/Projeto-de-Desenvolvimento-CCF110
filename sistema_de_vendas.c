@@ -1,8 +1,8 @@
 #include "cadastros.h"
 
 //Definir a quantidade máxima de produtos que serão cadastrados:
-int max_produto = 1;
-int max_vendas = 1;
+int max_produto = 2;
+int max_vendas = 2;
 
 int main()
 {
@@ -17,39 +17,37 @@ int main()
     do
     {
         exibir_menu();
-
         printf("\n\n => Digite a opção desejada: ");
         scanf("%d", &opcao);
 
-        // CADASTRO DOS PRODUTOS
-        if (opcao == 1)
+        switch (opcao)
         {
-            cadastrar_produtos(produtos, max_produto, &num_produtos);
+            case 1:
+                cadastrar_produtos(produtos, max_produto, &num_produtos);
+                break;
+
+            case 2:
+                visualizar_produtos(produtos, num_produtos);
+                break;
+
+            case 3:
+                cadastrar_venda(produtos, max_produto, &vendas, max_vendas, &num_vendas);
+                break;
+
+            case 4:
+                visualizar_vendas(vendas, num_vendas);
+                break;
+
+            case 0:
+                printf("Saída realizada com sucesso!");
+                break;
+
+            default:
+                printf(" \033[31mEscolha uma opção válida!! ");
+                printf("\033[0m");
         }
-
-            // VISUALIZAÇÃO DE PRODUTOS
-        else if (opcao == 2)
-        {
-            visualizar_produtos(produtos, num_produtos);
-        }
-
-            // CADASTRO DE VENDAS:
-            //else if (opcao == 3) {cadastrar_venda(&produtos, &vendas, num_produtos, max_produto, num_vendas);}
-
-            // VISUALIZAR VENDAS
-            // else if (opcao == 4){ visualizar_vendas(&vendas, num_vendas);}
-
-        else if (opcao == 0)
-        {
-            printf("Saída realizada com sucesso!");
-            break;
-        } else
-        {
-            printf(" \033[31mEscolha uma opção válida!! ");
-            printf("\033[0m");
-        }
-
     } while (opcao != 0);
+
 
     return 0;
 }

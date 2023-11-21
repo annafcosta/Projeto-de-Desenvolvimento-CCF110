@@ -52,7 +52,6 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
 }
 
 // VISUALIZAR PRODUTOS
-
 void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
 {
     printf("\n~~~~~~~~~~~~~~~ PRODUTOS CADASTRADOS ~~~~~~~~~~~~~~~\n");
@@ -157,7 +156,6 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
 }
 
 // VISUALIZAR VENDAS:
-
 void visualizar_vendas(Cadastro_venda *vendas, int num_vendas)
 {
     printf("\n~~~~~~~~~~~~~~~ VENDAS REALIZADAS ~~~~~~~~~~~~~~~\n");
