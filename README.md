@@ -55,11 +55,13 @@ ___
   * Registro de Vendas;
   
 * *Cadastro de Produtos:* O sistema desenvolvido é capaz de cadastrar produtos a escolha do usuário, lendo os nomes, o código do produto e suas respectivas quantidades e preços.
+  
 * *Registro de Vendas:* Recentemente, realizou-se uma implementação parcial do registro de vendas. Dessa forma, é possível registrar a venda de um produto por meio de seu código, demonstrando também, a visualização do valor total gerado pela venda.
+  
+* *Visualização das vendas:* Na última atualização, a opção de visualizar as vendas foi implementada. Dessa forma, é possível visualizar o valor total da venda de cada produto.
 
 ### 🟡 Futuras Implementações 
 ___
-* *Registro de Vendas:* O objetivo é definir uma estrutura para o sistema de registro de vendas, incluindo a possibilidade de informar ao usuário o lucro (do mês respectivo as vendas realizadas) das vendas;
 
 * *Visualização do estoque:* Por meio da escolha do menu, será possível visualizar os produtos em estoque;
 
