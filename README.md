@@ -35,9 +35,8 @@ Recentemente, a aluna Hellen Carolyna iniciou um pequeno negócio envolvendo ven
 <!-- Seu conteúdo para Autores -->
 </div>
 
-___
-### 🟣 Objetivos:
-___
+
+## 🟣 Objetivos:
 
 * *Eficiência Operacional:* O principal objetivo do sistema é melhorar a eficiência operacional, automatizando tarefas repetitivas, como controle de estoque e registro de vendas;
 
@@ -46,8 +45,7 @@ ___
 * *Controle Financeiro:* Um dos objetivos do sistema é auxiliar os usuários a acompanharem suas receitas de vendas.
 
 
-### 🟢 Implementações Existentes
-___
+## 🟢 Implementações Existentes
 
 * *Menu Interativo:* O menu interativo foi desenvolvido de maneira que a navegação do usuário seja intuitiva. Além desse aspecto, foi adicionado cores para personalização das opções do menu, facilitando assim, a visualização e escolha do usuário. Abaixo estão as opções válidas, até o momento, para o Menu;
   * Cadastro de produtos no estoque;
@@ -60,14 +58,13 @@ ___
   
 * *Visualização das vendas:* Na última atualização, a opção de visualizar as vendas foi implementada. Dessa forma, é possível visualizar o valor total da venda de cada produto.
 
-### 🟡 Futuras Implementações 
-___
+## 🟡 Futuras Implementações 
 
 * *Visualização do estoque:* Por meio da escolha do menu, será possível visualizar os produtos em estoque;
 
-### 🔵 Descrição de funcionamento
-___
-### ⚪ Autores
+## 🔵 Descrição de funcionamento
+
+## ⚪ Autores
 
 Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
 
