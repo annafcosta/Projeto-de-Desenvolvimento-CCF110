@@ -71,6 +71,4 @@ ___
 
 Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
 
-Hellen Carolyna Magalhães Miranda (5086). [[User-GitHub]](https://github.com/HellenCarolyna)
-
 
