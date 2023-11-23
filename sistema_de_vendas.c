@@ -22,19 +22,19 @@ int main()
 
         switch (opcao)
         {
-            case 1:
+            case 1: // Cadastrar produtos:
                 cadastrar_produtos(produtos, max_produto, &num_produtos);
                 break;
 
-            case 2:
+            case 2: // Visualizar produtos:
                 visualizar_produtos(produtos, num_produtos);
                 break;
 
-            case 3:
+            case 3: // Cadastrar vendas:
                 cadastrar_venda(produtos, max_produto, &vendas, max_vendas, &num_vendas);
                 break;
 
-            case 4:
+            case 4: // Visualizar vendas:
                 visualizar_vendas(vendas, num_vendas);
                 break;
 
