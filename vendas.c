@@ -1,3 +1,6 @@
+#include "produtos.h"
+#include "vendas.h"
+
 // CADASTRO DE VENDAS:
 // Verificando a validade do código do produto
 int verificar_codigo_produto(int codigo, Cadastro_produto *produtos, int num_produtos)
@@ -55,7 +58,9 @@ void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
 
         printf("\033[0;33mVenda registrada com sucesso!\n");
         printf("\033[34mValor da venda: R$ %.2f\n", vendas[*num_vendas].valor_total);
-    } else
+    } 
+    
+    else
     { // Caso FLAG_TESTE == 0
         atualizar_quantidade_produto(produtos, produto_encontrado, quantidade_vendida);
 

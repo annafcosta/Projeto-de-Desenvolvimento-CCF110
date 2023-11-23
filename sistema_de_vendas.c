@@ -1,8 +1,7 @@
-#include "cadastros.h"
+#include "vendas.h"
 
 //Definir a quantidade máxima de produtos que serão cadastrados:
-int max_produto = 2;
-int max_vendas = 2;
+int max_produto = 1;
 
 int main()
 {
@@ -31,7 +30,7 @@ int main()
                 break;
 
             case 3: // Cadastrar vendas:
-                cadastrar_venda(produtos, max_produto, &vendas, max_vendas, &num_vendas);
+                cadastrar_venda(produtos, max_produto, vendas, max_vendas, &num_vendas);
                 break;
 
             case 4: // Visualizar vendas:
@@ -39,7 +38,7 @@ int main()
                 break;
 
             case 0:
-                printf("Saída realizada com sucesso!");
+                printf("\nSaída realizada com sucesso!");
                 break;
 
             default:
