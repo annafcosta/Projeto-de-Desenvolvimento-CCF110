@@ -38,7 +38,7 @@ int main()
                 break;
 
             case 0:
-                printf("\nSaída realizada com sucesso!");
+                printf("\nSaída realizada com sucesso!\n");
                 break;
 
             default:
