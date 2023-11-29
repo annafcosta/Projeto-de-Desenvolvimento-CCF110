@@ -119,7 +119,7 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                     if (quantidade_vendida <= produtos[produto_encontrado].quantidade)
                     {
                         // Verificar se o número de vendas não ultrapassa o limite máximo
-                        if (*num_vendas < max_vendas)
+                        if (*num_vendas < MAX_VENDAS)
                         {
                             processar_venda(produtos, vendas, produto_encontrado, quantidade_vendida, num_vendas);
                         } else
@@ -129,7 +129,7 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                         }
                     } else
                     {
-                        printf("\033[31mQuantidade insuficiente em estoque para realizar a venda.\n");
+                        printf("\033[31m\nQuantidade insuficiente em estoque para realizar a venda.\n");
                         printf("\033[0m");
                     }
                 }

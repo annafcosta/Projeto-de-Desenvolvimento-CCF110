@@ -1,14 +1,11 @@
 #include "vendas.h"
 
-//Definir a quantidade máxima de produtos que serão cadastrados:
-int max_produto = 1;
-
 int main()
 {
     int opcao;
 
-    Cadastro_produto produtos[max_produto];
-    Cadastro_venda vendas[max_vendas];
+    Cadastro_produto produtos[MAX_PRODUTO];
+    Cadastro_venda vendas[MAX_VENDAS];
 
     int num_produtos = 0;
     int num_vendas = 0;
@@ -22,7 +19,7 @@ int main()
         switch (opcao)
         {
             case 1: // Cadastrar produtos:
-                cadastrar_produtos(produtos, max_produto, &num_produtos);
+                cadastrar_produtos(produtos, MAX_PRODUTO, &num_produtos);
                 break;
 
             case 2: // Visualizar produtos:
@@ -30,7 +27,7 @@ int main()
                 break;
 
             case 3: // Cadastrar vendas:
-                cadastrar_venda(produtos, max_produto, vendas, max_vendas, &num_vendas);
+                cadastrar_venda(produtos, MAX_PRODUTO, vendas, MAX_VENDAS, &num_vendas);
                 break;
 
             case 4: // Visualizar vendas:
