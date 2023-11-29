@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define FLAG_TESTE 1
-#define MAX_VENDAS 2
-#define MAX_PRODUTO 2
+#define FLAG_TESTE 0
+#define MAX_VENDAS 50
+#define MAX_PRODUTO 50
 
 // Definir a struct para representar um produto
 typedef struct

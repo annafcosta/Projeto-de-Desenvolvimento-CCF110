@@ -38,7 +38,7 @@ int main()
                 printf("\nSaída realizada com sucesso!\n");
                 break;
 
-            default:
+            default: // Quebra para entradas inválidas
                 printf(" \033[31mEscolha uma opção válida!! ");
                 printf("\033[0m");
         }
