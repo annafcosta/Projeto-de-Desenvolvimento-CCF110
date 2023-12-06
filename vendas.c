@@ -2,6 +2,7 @@
 #include "vendas.h"
 
 // CADASTRO DE VENDAS:
+
 // Verificando a validade do código do produto
 int verificar_codigo_produto(int codigo, Cadastro_produto *produtos, int num_produtos)
 {
@@ -165,8 +166,25 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
     }
 }
 
+// Função para calcular a quantidade que sobrou de produtos após a venda:
+int calcular_quantidade_restante(Cadastro_produto *produtos, int num_produtos, Cadastro_venda venda)
+{
+    // Encontrar o índice do produto na lista de produtos
+    int indice_produto = verificar_codigo_produto(venda.codigo_produto_vendido, produtos, num_produtos);
+
+    if (indice_produto != -1)
+    {
+        // Calcular a quantidade restante
+        int quantidade_restante = produtos[indice_produto].quantidade;
+
+        return quantidade_restante;
+    }
+
+    return -1;
+}
+
 // VISUALIZAR VENDAS:
-void visualizar_vendas(Cadastro_venda *vendas, int num_vendas)
+void visualizar_vendas(Cadastro_produto *produtos, int num_produtos, Cadastro_venda *vendas, int num_vendas)
 {
     printf("\n~~~~~~~~~~~~~~~ VENDAS REALIZADAS ~~~~~~~~~~~~~~~\n");
 
@@ -178,22 +196,79 @@ void visualizar_vendas(Cadastro_venda *vendas, int num_vendas)
             printf("\033[34m\nCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
             printf("\033[38;5;208mQUANTIDADE VENDIDA \033[0m| %d\n", vendas[i].quantidade_vendida);
             printf("\033[34mVALOR TOTAL \033[0m| R$ %.2f\n", vendas[i].valor_total);
+
+            // Calcular a quantidade restante para cada venda dentro do loop
+            int quantidade_restante = calcular_quantidade_restante(produtos, num_produtos, vendas[i]);
+
+            printf("\033[35mQUANTIDADE EM ESTOQUE APÓS VENDA \033[0m| %d\n", quantidade_restante);
+
             printf("\n");
         }
     } 
-    
     else
     {
-
         for (int i = 0; i < num_vendas; ++i)
         {
             printf("\n\033[1;32mVENDA %d \033[0m\n", i + 1);
             printf("\033[34m\nCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
             printf("\033[38;5;208mQUANTIDADE VENDIDA \033[0m| %d\n", vendas[i].quantidade_vendida);
             printf("\033[34mVALOR TOTAL \033[0m| R$ %.2f\n", vendas[i].valor_total);
+
+            int quantidade_restante = calcular_quantidade_restante(produtos, num_produtos, vendas[i]);
+
+            printf("\033[35mQUANTIDADE EM ESTOQUE APÓS VENDA \033[0m| %d\n", quantidade_restante);
+
             printf("\n");
         }
     }
 
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+
+// SALVAR AS VENDAS EM UM ARQUIVO TXT:
+void salvar_vendas_em_arquivo(Cadastro_venda *vendas, int num_vendas, Cadastro_produto *produtos, int num_produtos) {
+    FILE *arquivo = fopen("vendas.txt", "a");  
+
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo 'vendas' para escrita!\n");
+        return;
+    }
+
+    int dia_da_venda, mes_da_venda;
+
+    do {
+        printf("\nInforme o dia da venda: ");
+        scanf("%d", &dia_da_venda);
+
+        if (dia_da_venda < 0) {
+            printf("Por favor, informe um valor não negativo para o dia.\n");
+        }
+    } while (dia_da_venda < 0);
+
+    do {
+        printf("\nInforme o mês da venda: ");
+        scanf("%d", &mes_da_venda);
+
+        if (mes_da_venda < 0) {
+            printf("Por favor, informe um valor não negativo para o mês.\n");
+        }
+    } while (mes_da_venda < 0);
+
+    for (int i = 0; i < num_vendas; ++i) {
+        
+        int quantidade_restante = calcular_quantidade_restante(produtos, num_produtos, vendas[i]);
+
+        fprintf(arquivo, "\n=> VENDA DO DIA: %d/%d\n", dia_da_venda, mes_da_venda);
+        fprintf(arquivo, "\n- VENDA - %d\n", i + 1);
+        fprintf(arquivo, "CÓDIGO DO PRODUTO VENDIDO | %d\n", vendas[i].codigo_produto_vendido);
+        fprintf(arquivo, "QUANTIDADE VENDIDA | %d\n", vendas[i].quantidade_vendida);
+        fprintf(arquivo, "VALOR TOTAL | R$ %.2f\n", vendas[i].valor_total);
+        fprintf(arquivo, "QUANTIDADE EM ESTOQUE APÓS VENDA | %d\n", quantidade_restante);
+        fprintf(arquivo, "\n");
+    }
+
+    fclose(arquivo);  // Fecha o arquivo
+
+    printf("\nInformações salvas em 'vendas.txt'!\n");
 }

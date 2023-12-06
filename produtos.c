@@ -19,6 +19,9 @@ void exibir_menu()
     printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 4 ");
     printf("\033[0m");
 
+    printf("\n\t• Salvar vendas em um arquivo \033[34m\t\t| Digite 5 ");
+    printf("\033[0m");
+
     printf("\n\t• Sair \033[34m\t\t\t\t\t| Digite 0\n");
     printf("\033[0m");
 }

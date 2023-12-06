@@ -31,7 +31,11 @@ int main()
                 break;
 
             case 4: // Visualizar vendas:
-                visualizar_vendas(vendas, num_vendas);
+                visualizar_vendas(produtos, num_produtos, vendas, num_vendas);
+                break;
+
+            case 5: // Salvar vendas em um arquivo:
+                salvar_vendas_em_arquivo(vendas, num_vendas, produtos, num_produtos);
                 break;
 
             case 0:
