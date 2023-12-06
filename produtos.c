@@ -124,7 +124,7 @@ void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
         for (int i = 0; i < num_produtos; ++i)
         {
             printf("\n\033[1;32mPRODUTO %d \033[0m\n", i + 1);
-            printf("\033[35mNOME       \033[0m| %s\n", produtos[i].nome);
+            printf("\033[35m\nNOME       \033[0m| %s\n", produtos[i].nome);
             printf("\033[34mCÓDIGO     \033[0m| %d\n", produtos[i].codigo);
             printf("\033[31mVALOR      \033[0m| R$ %.2f\n", produtos[i].valor);
             printf("\033[38;5;208mQUANTIDADE \033[0m| %d\n", produtos[i].quantidade);
@@ -135,7 +135,7 @@ void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
         for (int i = 0; i < num_produtos; ++i)
         {
             printf("\n\033[1;32mPRODUTO %d \033[0m\n", i + 1);
-            printf("\033[35mNOME       \033[0m| %s\n", produtos[i].nome);
+            printf("\033[35m\nNOME       \033[0m| %s\n", produtos[i].nome);
             printf("\033[34mCÓDIGO     \033[0m| %d\n", produtos[i].codigo);
             printf("\033[31mVALOR      \033[0m| R$ %.2f\n", produtos[i].valor);
             printf("\033[38;5;208mQUANTIDADE \033[0m| %d\n", produtos[i].quantidade);

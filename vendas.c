@@ -130,6 +130,9 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                         printf("\033[0;33m\nVenda registrada com sucesso!\n");
                         printf("\033[34mValor da venda: R$ %.2f\n", vendas[*num_vendas].valor_total);
                     }
+
+                    (*num_vendas)++;
+                    
                 } else
                 {
                     if (quantidade_vendida <= produtos[produto_encontrado].quantidade)
@@ -167,23 +170,25 @@ void visualizar_vendas(Cadastro_venda *vendas, int num_vendas)
 {
     printf("\n~~~~~~~~~~~~~~~ VENDAS REALIZADAS ~~~~~~~~~~~~~~~\n");
 
-    if (FLAG_TESTE == 1)
+    if (FLAG_TESTE == 1 && num_vendas > 0)
     {
         for (int i = 0; i < num_vendas; ++i)
         {
-            printf("\n\033[1;32mVENDA %d \033[0m\n", i + 1);
-            printf("\033[34mCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
+            printf("\n\033[1;32m\nVENDA %d \033[0m\n", i + 1);
+            printf("\033[34m\nCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
             printf("\033[38;5;208mQUANTIDADE VENDIDA \033[0m| %d\n", vendas[i].quantidade_vendida);
             printf("\033[34mVALOR TOTAL \033[0m| R$ %.2f\n", vendas[i].valor_total);
             printf("\n");
         }
-    } else
+    } 
+    
+    else
     {
 
         for (int i = 0; i < num_vendas; ++i)
         {
             printf("\n\033[1;32mVENDA %d \033[0m\n", i + 1);
-            printf("\033[34mCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
+            printf("\033[34m\nCÓDIGO DO PRODUTO VENDIDO \033[0m| %d\n", vendas[i].codigo_produto_vendido);
             printf("\033[38;5;208mQUANTIDADE VENDIDA \033[0m| %d\n", vendas[i].quantidade_vendida);
             printf("\033[34mVALOR TOTAL \033[0m| R$ %.2f\n", vendas[i].valor_total);
             printf("\n");
