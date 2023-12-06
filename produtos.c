@@ -41,7 +41,7 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
 
     // Verificação para garantir que qunatidade desejada seja menor que MAX_PRODUTO
     if (quantidade_desejada > max_produto) {
-        printf("\033[0;31m\nA quantidade desejada é maior do que o máximo permitido. Ajustando para o máximo.\033[0m\n");
+        printf("\033[0;31m\nA quantidade desejada é maior do que o máximo permitido.\033[0m\n");
         quantidade_desejada = max_produto;
     }
 
@@ -103,7 +103,7 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
             sprintf(produtos[i].nome, "Produto %d", i + 1);
             produtos[i].codigo = i + 1001;
             produtos[i].valor = 10.0 + i;
-            produtos[i].quantidade = 50 + i;
+            produtos[i].quantidade = 10 + i;
         }
 
         *num_produtos = quantidade_desejada;

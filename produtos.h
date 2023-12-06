@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define FLAG_TESTE 0
+
+#define FLAG_TESTE 1 // 0 para adicionar as informações manualmente e 1 para o processo automático
+
 #define MAX_VENDAS 50
 #define MAX_PRODUTO 50
 
