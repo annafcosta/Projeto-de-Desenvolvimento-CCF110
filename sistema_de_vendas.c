@@ -14,9 +14,9 @@ int main()
 
     do
     {
-        printf("Escolha arquivo ou cadastro manual:");
+        printf("\nEscolha uma forma para cadastrar seus produtos:");
         printf("\nCadastro manual (1) | Arquivo (2)\n");
-        printf("=> Digite a opção desejada: ");
+        printf("\n=> Digite a opção desejada: ");
         scanf("%d", &primeiro_opcao);
 
         if (primeiro_opcao < 0)
@@ -48,7 +48,7 @@ int main()
 
     } else if (primeiro_opcao == 2)
     {
-        ler_arquivo_produtos(produtos, &qtd_atual_produtos);
+        ler_arquivo_produtos(produtos, &qtd_atual_produtos); // Opção 2 do Menu
     }
 
     do

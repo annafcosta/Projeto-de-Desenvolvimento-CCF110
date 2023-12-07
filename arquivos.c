@@ -25,7 +25,7 @@ void ler_arquivo_produtos(Cadastro_produto *produtos, int *numero_de_produtos)
         if (!fscanf(arquivo_produto, "%s %f %d %d", produtos[i].nome, &produtos[i].valor, &produtos[i].codigo,
                     &produtos[i].quantidade))
         {
-            printf("Deu erro");
+            printf("Erro ao imprimir as informações do arquivo.");
         }
     }
 

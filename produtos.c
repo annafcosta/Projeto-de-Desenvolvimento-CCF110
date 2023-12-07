@@ -4,28 +4,29 @@
 void exibir_menu()
 {
     printf("\033[35m");  // Text color (Rosa)
-    printf("\n~~~~~~~~~~~~~~~~~~~~| DELÍCIAS DA HELLEN |~~~~~~~~~~~~~~~~~~~~\n");
+    printf("\n~~~~~~~~~~~~~~~~~~~~| DELÍCIAS DA HELLEN |~~~~~~~~~~~~~~~~~~~~\n\n");
     printf("\033[0m");   // Resetar a cor para o padrão
 
-    printf("\n\t• Cadastrar novo produto no estoque \033[34m\t| Digite 1 ");
+    printf("\n• Cadastrar novo produto no estoque \033[34m\t\t| Digite 1 ");
     printf("\033[0m");
 
-    printf("\n\t• Cadastrar produtos por arquivo \033[34m\t\t| Digite 2 ");
+    printf("\n\n• Visualizar produtos do arquivo \033[34m\t\t| Digite 2 ");
+
     printf("\033[0m");
 
-    printf("\n\t• Visualizar produtos no estoque \033[34m\t| Digite 3 ");
+    printf("\n\n• Visualizar produtos do cadastro manual \033[34m\t| Digite 3 ");
     printf("\033[0m");
 
-    printf("\n\t• Cadastrar nova venda \033[34m\t\t\t| Digite 4 ");
+    printf("\n\n• Cadastrar nova venda \033[34m\t\t\t\t| Digite 4 ");
     printf("\033[0m");
 
-    printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 5 ");
+    printf("\n\n• Listar vendas \033[34m\t\t\t\t| Digite 5 ");
     printf("\033[0m");
 
-    printf("\n\t• Salvar vendas em um arquivo \033[34m\t\t| Digite 6 ");
+    printf("\n\n• Salvar vendas em um arquivo \033[34m\t\t\t| Digite 6 ");
     printf("\033[0m");
 
-    printf("\n\t• Sair \033[34m\t\t\t\t\t| Digite 0\n");
+    printf("\n\n• Sair \033[34m\t\t\t\t\t\t| Digite 0\n");
     printf("\033[0m");
 }
 
