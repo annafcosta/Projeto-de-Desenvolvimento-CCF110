@@ -67,6 +67,10 @@ ___
 
 ## 🔵 Descrição de funcionamento
 
+* *Criação de Arquivos:* A formatação de escrita do arquivo 'estoque.txt', deve seguir ser escrito da seguinte maneira 'Nome_do_Produto 2.25 005 18';
+   * Note que, a formatação é iniciada pelo nome do produto, seguido do valor, código e quantidade.
+   * O atual sistema tem uma limitação em relação a leitura de espaços, por esse motivo, a formatação acima deve ser seguida.
+
 ## ⚪ Autores
 
 Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
