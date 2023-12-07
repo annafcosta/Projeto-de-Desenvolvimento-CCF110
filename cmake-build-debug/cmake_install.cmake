@@ -1,4 +1,4 @@
-# Install script for directory: /home/anna/PROG/Projeto-de-Desenvolvimento-CCF110
+# Install script for directory: /home/anna/Projeto-de-Desenvolvimento-CCF110
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/anna/PROG/Projeto-de-Desenvolvimento-CCF110/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/anna/Projeto-de-Desenvolvimento-CCF110/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -10,16 +10,19 @@ void exibir_menu()
     printf("\n\t• Cadastrar novo produto no estoque \033[34m\t| Digite 1 ");
     printf("\033[0m");
 
-    printf("\n\t• Visualizar produtos no estoque \033[34m\t| Digite 2 ");
+    printf("\n\t• Cadastrar produtos por arquivo \033[34m\t\t| Digite 2 ");
     printf("\033[0m");
 
-    printf("\n\t• Cadastrar nova venda \033[34m\t\t\t| Digite 3 ");
+    printf("\n\t• Visualizar produtos no estoque \033[34m\t| Digite 3 ");
     printf("\033[0m");
 
-    printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 4 ");
+    printf("\n\t• Cadastrar nova venda \033[34m\t\t\t| Digite 4 ");
     printf("\033[0m");
 
-    printf("\n\t• Salvar vendas em um arquivo \033[34m\t\t| Digite 5 ");
+    printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 5 ");
+    printf("\033[0m");
+
+    printf("\n\t• Salvar vendas em um arquivo \033[34m\t\t| Digite 6 ");
     printf("\033[0m");
 
     printf("\n\t• Sair \033[34m\t\t\t\t\t| Digite 0\n");
@@ -29,28 +32,9 @@ void exibir_menu()
 // CADASTRO DE PRODUTOS:
 void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_produtos)
 {
-
-    int quantidade_desejada;
-
-    do {
-        printf("\nInforme a quantidade de produtos que deseja cadastrar: ");
-        scanf("%d", &quantidade_desejada);
-
-        if (quantidade_desejada < 0) {
-        printf("\033[0;31m\nA quantidade não pode ser negativa. Por favor, insira uma quantidade válida.\033[0m\n");
-        }
-
-    } while (quantidade_desejada < 0);
-
-    // Verificação para garantir que qunatidade desejada seja menor que MAX_PRODUTO
-    if (quantidade_desejada > max_produto) {
-        printf("\033[0;31m\nA quantidade desejada é maior do que o máximo permitido.\033[0m\n");
-        quantidade_desejada = max_produto;
-    }
-
     if (FLAG_TESTE == 0)
     {
-        for (int i = 0; i < quantidade_desejada; i++)
+        for (int i = 0; i < num_produtos; i++)
         {
             printf("\nInforme o nome do produto %d: ", i + 1);
             getchar(); // Consumir a nova linha pendente
@@ -92,8 +76,6 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
             } while (produtos[i].quantidade < 0);
         }
 
-        *num_produtos = quantidade_desejada;
-
         printf("\033[0;33m\nProdutos cadastrados com sucesso!\n");
         printf("\033[0m");
     }
@@ -101,15 +83,13 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
     else
     {
         // Se FLAG_TESTE for 1, os valores serão automaticamente definidos
-        for (int i = 0; i < quantidade_desejada; i++)
+        for (int i = 0; i < num_produtos; i++)
         {
             sprintf(produtos[i].nome, "Produto %d", i + 1);
             produtos[i].codigo = i + 1001;
             produtos[i].valor = 10.0 + i;
             produtos[i].quantidade = 10 + i;
         }
-
-        *num_produtos = quantidade_desejada;
 
         printf("\033[0;33m\nProdutos cadastrados com sucesso!\n");
         printf("\033[0m");
