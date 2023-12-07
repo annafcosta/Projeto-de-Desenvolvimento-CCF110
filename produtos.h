@@ -23,7 +23,7 @@ typedef struct
 //Cabeçalho das Funções
 void exibir_menu();
 
-void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_produtos);
+void cadastrar_produtos(Cadastro_produto *produtos, int *num_produtos, int max_produto);
 
 void visualizar_produtos(Cadastro_produto *produtos, int num_produtos);
 

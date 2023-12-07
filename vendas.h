@@ -30,6 +30,4 @@ int calcular_quantidade_restante(Cadastro_produto *produtos, int num_produtos, C
 
 void visualizar_vendas(Cadastro_produto *produtos, int num_produtos, Cadastro_venda *vendas, int num_vendas);
 
-void salvar_vendas_em_arquivo(Cadastro_venda *vendas, int num_vendas, Cadastro_produto *produtos, int num_produtos);
-
 #endif

@@ -30,11 +30,11 @@ void exibir_menu()
 }
 
 // CADASTRO DE PRODUTOS:
-void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_produtos)
+void cadastrar_produtos(Cadastro_produto *produtos, int *num_produtos, int max_produto)
 {
     if (FLAG_TESTE == 0)
     {
-        for (int i = 0; i < num_produtos; i++)
+        for (int i = 0; i < max_produto; i++)
         {
             printf("\nInforme o nome do produto %d: ", i + 1);
             getchar(); // Consumir a nova linha pendente
@@ -74,6 +74,8 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
                     printf("\033[0;31m\nA quantidade não pode ser negativa. Por favor, insira uma quantidade não negativa.\033[0m\n");
                 }
             } while (produtos[i].quantidade < 0);
+
+            (*num_produtos)++;
         }
 
         printf("\033[0;33m\nProdutos cadastrados com sucesso!\n");
@@ -83,7 +85,7 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
     else
     {
         // Se FLAG_TESTE for 1, os valores serão automaticamente definidos
-        for (int i = 0; i < num_produtos; i++)
+        for (int i = 0; i < max_produto; i++)
         {
             sprintf(produtos[i].nome, "Produto %d", i + 1);
             produtos[i].codigo = i + 1001;

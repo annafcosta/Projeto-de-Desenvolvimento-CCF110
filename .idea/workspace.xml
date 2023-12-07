@@ -20,32 +20,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3a8ad86-3cf9-49c1-b227-fbb947841414" name="Changes" comment="Implementação de verificações para invalidar números negativos.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e3a8ad86-3cf9-49c1-b227-fbb947841414" name="Changes" comment="Implementação de leitura de arquivos.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastros.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-a9e6bbb074c408160c02.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-114ed597c29107c05f5c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-75127653c70a448e98a4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-09T14-23-10-0251.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Projeto_de_Desenvolvimento_CCF110-Debug-2568ac466a15cdf3c7f2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arquivos.c" beforeDir="false" afterPath="$PROJECT_DIR$/arquivos.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arquivos.h" beforeDir="false" afterPath="$PROJECT_DIR$/arquivos.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projeto_de_Desenvolvimento_CCF110" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projeto_de_Desenvolvimento_CCF110" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/produtos.c" beforeDir="false" afterPath="$PROJECT_DIR$/produtos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/produtos.h" beforeDir="false" afterPath="$PROJECT_DIR$/produtos.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistema_de_vendas" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sistema_de_vendas.c" beforeDir="false" afterPath="$PROJECT_DIR$/sistema_de_vendas.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendas.c" beforeDir="false" afterPath="$PROJECT_DIR$/vendas.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendas.h" beforeDir="false" afterPath="$PROJECT_DIR$/vendas.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendas.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +88,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/anna/Projeto-de-Desenvolvimento-CCF110",
+    "last_opened_file_path": "/home/anna/ccf110-eleicao-reitor-2023",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,7 +134,7 @@
       <workItem from="1696598186643" duration="1353000" />
       <workItem from="1696778237578" duration="13000" />
       <workItem from="1696818523283" duration="121000" />
-      <workItem from="1701913222739" duration="3130000" />
+      <workItem from="1701913222739" duration="8680000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação parcial.">
       <option name="closed" value="true" />
@@ -194,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696818629331</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implementação de leitura de arquivos.">
+      <option name="closed" value="true" />
+      <created>1701916413208</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701916413209</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implementação de leitura de arquivos.">
+      <option name="closed" value="true" />
+      <created>1701916435541</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701916435541</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +217,18 @@
     <MESSAGE value="Implementação parcial." />
     <MESSAGE value="Implementação das entradas e leituras dos produtos." />
     <MESSAGE value="Implementação de verificações para invalidar números negativos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação de verificações para invalidar números negativos." />
+    <MESSAGE value="Implementação de leitura de arquivos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação de leitura de arquivos." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sistema_de_vendas.c</url>
+          <line>75</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

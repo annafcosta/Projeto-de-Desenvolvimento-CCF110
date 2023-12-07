@@ -58,9 +58,7 @@ void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
 
         printf("\033[0;33mVenda registrada com sucesso!\n");
         printf("\033[34mValor da venda: R$ %.2f\n", vendas[*num_vendas].valor_total);
-    } 
-    
-    else
+    } else
     { // Caso FLAG_TESTE == 0
         atualizar_quantidade_produto(produtos, produto_encontrado, quantidade_vendida);
 
@@ -103,7 +101,7 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
 
                 printf("\n");
 
-                 // Armazena a quantidade em estoque antes da venda
+                // Armazena a quantidade em estoque antes da venda
                 int quantidade_antes = produtos[produto_encontrado].quantidade;
 
                 if (FLAG_TESTE == 1)
@@ -116,8 +114,7 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                     {
                         printf("\033[31m\nQuantidade insuficiente em estoque para realizar a venda.\n");
                         printf("\033[0m");
-                     }
-                    else
+                    } else
                     {
                         produtos[produto_encontrado].quantidade -= quantidade_vendida;
 
@@ -126,14 +123,15 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                         vendas[*num_vendas].valor_total = produtos[produto_encontrado].valor * quantidade_vendida;
 
                         printf("\033[34m\nQuantidade em estoque antes da venda: %d\n", quantidade_antes);
-                        printf("\033[34mQuantidade em estoque após a venda: %d\n", produtos[produto_encontrado].quantidade);
+                        printf("\033[34mQuantidade em estoque após a venda: %d\n",
+                               produtos[produto_encontrado].quantidade);
 
                         printf("\033[0;33m\nVenda registrada com sucesso!\n");
                         printf("\033[34mValor da venda: R$ %.2f\n", vendas[*num_vendas].valor_total);
                     }
 
                     (*num_vendas)++;
-                    
+
                 } else
                 {
                     if (quantidade_vendida <= produtos[produto_encontrado].quantidade)
@@ -144,7 +142,8 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                             processar_venda(produtos, vendas, produto_encontrado, quantidade_vendida, num_vendas);
 
                             printf("\033[34m\nQuantidade em estoque antes da venda: %d\n", quantidade_antes);
-                            printf("\033[34mQuantidade em estoque após a venda: %d\n", produtos[produto_encontrado].quantidade);
+                            printf("\033[34mQuantidade em estoque após a venda: %d\n",
+                                   produtos[produto_encontrado].quantidade);
 
                         } else
                         {
@@ -204,8 +203,7 @@ void visualizar_vendas(Cadastro_produto *produtos, int num_produtos, Cadastro_ve
 
             printf("\n");
         }
-    } 
-    else
+    } else
     {
         for (int i = 0; i < num_vendas; ++i)
         {
@@ -225,50 +223,3 @@ void visualizar_vendas(Cadastro_produto *produtos, int num_produtos, Cadastro_ve
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 }
 
-
-// SALVAR AS VENDAS EM UM ARQUIVO TXT:
-void salvar_vendas_em_arquivo(Cadastro_venda *vendas, int num_vendas, Cadastro_produto *produtos, int num_produtos) {
-    FILE *arquivo = fopen("vendas.txt", "a");  
-
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo 'vendas' para escrita!\n");
-        return;
-    }
-
-    int dia_da_venda, mes_da_venda;
-
-    do {
-        printf("\nInforme o dia da venda: ");
-        scanf("%d", &dia_da_venda);
-
-        if (dia_da_venda < 0) {
-            printf("Por favor, informe um valor não negativo para o dia.\n");
-        }
-    } while (dia_da_venda < 0);
-
-    do {
-        printf("\nInforme o mês da venda: ");
-        scanf("%d", &mes_da_venda);
-
-        if (mes_da_venda < 0) {
-            printf("Por favor, informe um valor não negativo para o mês.\n");
-        }
-    } while (mes_da_venda < 0);
-
-    for (int i = 0; i < num_vendas; ++i) {
-        
-        int quantidade_restante = calcular_quantidade_restante(produtos, num_produtos, vendas[i]);
-
-        fprintf(arquivo, "\n=> VENDA DO DIA: %d/%d\n", dia_da_venda, mes_da_venda);
-        fprintf(arquivo, "\n- VENDA - %d\n", i + 1);
-        fprintf(arquivo, "CÓDIGO DO PRODUTO VENDIDO | %d\n", vendas[i].codigo_produto_vendido);
-        fprintf(arquivo, "QUANTIDADE VENDIDA | %d\n", vendas[i].quantidade_vendida);
-        fprintf(arquivo, "VALOR TOTAL | R$ %.2f\n", vendas[i].valor_total);
-        fprintf(arquivo, "QUANTIDADE EM ESTOQUE APÓS VENDA | %d\n", quantidade_restante);
-        fprintf(arquivo, "\n");
-    }
-
-    fclose(arquivo);  // Fecha o arquivo
-
-    printf("\nInformações salvas em 'vendas.txt'!\n");
-}
