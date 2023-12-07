@@ -6,20 +6,23 @@ void exibir_menu()
     printf("\033[35m");  // Text color (Rosa)
     printf("\n~~~~~~~~~~~~~~~~~~~~| DELÍCIAS DA HELLEN |~~~~~~~~~~~~~~~~~~~~\n");
     printf("\033[0m");   // Resetar a cor para o padrão
-
-    printf("\n\t• Cadastrar novo produto no estoque \033[34m\t| Digite 1 ");
+    
+    printf("\n\t• Cadastrar produto no estoque de maneira manual \033[34m| Digite 1 ");
     printf("\033[0m");
 
-    printf("\n\t• Visualizar produtos no estoque \033[34m\t| Digite 2 ");
+    printf("\n\t• Visualizar produtos cadastrados manualmente no estoque \033[34m| Digite 2");
     printf("\033[0m");
 
-    printf("\n\t• Cadastrar nova venda \033[34m\t\t\t| Digite 3 ");
+    printf("\n\t• Cadastrar produtos por arquivo \033[34m\t| Digite 3 ");
     printf("\033[0m");
 
-    printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 4 ");
+    printf("\n\t• Cadastrar nova venda \033[34m\t\t\t| Digite 4 ");
     printf("\033[0m");
 
-    printf("\n\t• Salvar vendas em um arquivo \033[34m\t\t| Digite 5 ");
+    printf("\n\t• Listar vendas \033[34m\t\t\t| Digite 5 ");
+    printf("\033[0m");
+
+    printf("\n\t• Salvar vendas em um arquivo \033[34m\t\t| Digite 6 ");
     printf("\033[0m");
 
     printf("\n\t• Sair \033[34m\t\t\t\t\t| Digite 0\n");
@@ -117,14 +120,14 @@ void cadastrar_produtos(Cadastro_produto *produtos, int max_produto, int *num_pr
 }
 
 // VISUALIZAR PRODUTOS
-void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
+void visualizar_produtos(Cadastro_produto *produtos, int *num_produtos)
 {
     printf("\n~~~~~~~~~~~~~~~ PRODUTOS CADASTRADOS ~~~~~~~~~~~~~~~\n");
 
     if (FLAG_TESTE == 1)
     {
 
-        for (int i = 0; i < num_produtos; ++i)
+        for (int i = 0; i < *num_produtos; ++i)
         {
             printf("\n\033[1;32mPRODUTO %d \033[0m\n", i + 1);
             printf("\033[35m\nNOME       \033[0m| %s\n", produtos[i].nome);
@@ -135,7 +138,7 @@ void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
         }
     } else
     {
-        for (int i = 0; i < num_produtos; ++i)
+        for (int i = 0; i < *num_produtos; ++i)
         {
             printf("\n\033[1;32mPRODUTO %d \033[0m\n", i + 1);
             printf("\033[35m\nNOME       \033[0m| %s\n", produtos[i].nome);
@@ -147,4 +150,20 @@ void visualizar_produtos(Cadastro_produto *produtos, int num_produtos)
     }
 
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+void ler_arquivo(Cadastro_produto *produtos){
+    FILE *arquivo;
+    arquivo = fopen("ESTOQUE.txt", "r");
+
+    int N;
+    fscanf(arquivo, "%i", &N); // A primeira linha do arquivo contem a quantidade de produtos no arquivo
+
+    for (int i = 0; i < N; i++){
+        fscanf(arquivo, "%s %f %i %i", produtos[i].nome, &produtos[i].valor, &produtos[i].codigo, &produtos[i].quantidade);
+    }
+
+    visualizar_produtos(produtos, N);
+    
+    fclose(arquivo);
 }

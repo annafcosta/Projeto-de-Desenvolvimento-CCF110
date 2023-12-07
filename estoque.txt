@@ -1,0 +1,7 @@
+brigadeiro 2.50 001 20
+beijinho 1.75 002 15
+cocada 1.00 003 25
+cajuzinho 3.00 004 10
+pé_de_moleque 2.25 005 18
+brigadeiro_de_morango 2.75 006 12
+beijinho_de_coco 2.00 007 22

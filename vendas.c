@@ -272,3 +272,4 @@ void salvar_vendas_em_arquivo(Cadastro_venda *vendas, int num_vendas, Cadastro_p
 
     printf("\nInformações salvas em 'vendas.txt'!\n");
 }
+
