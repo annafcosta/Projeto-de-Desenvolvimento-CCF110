@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include "produtos.h"
 
-// Definir a struct para representar uma venda
+// Struct para representar uma venda
 typedef struct
 {
     int codigo_produto_vendido;
@@ -26,8 +26,10 @@ void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
 void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                      Cadastro_venda *vendas, int maxvendas, int *num_vendas);
 
-int calcular_quantidade_restante(Cadastro_produto *produtos, int num_produtos, Cadastro_venda venda);
+int calcular_quantidade_restante(Cadastro_produto *produtos, int num_produtos, 
+                                    Cadastro_venda venda);
 
-void visualizar_vendas(Cadastro_produto *produtos, int num_produtos, Cadastro_venda *vendas, int num_vendas);
+void visualizar_vendas(Cadastro_produto *produtos, int num_produtos, 
+                        Cadastro_venda *vendas, int num_vendas);
 
 #endif

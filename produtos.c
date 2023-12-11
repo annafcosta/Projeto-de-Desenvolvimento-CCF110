@@ -10,20 +10,17 @@ void exibir_menu()
     printf("\n• Cadastrar novo produto no estoque \033[34m\t\t| Digite 1 ");
     printf("\033[0m");
 
-    printf("\n\n• Visualizar produtos do arquivo \033[34m\t\t| Digite 2 ");
+    printf("\n\n• Visualizar produtos em estoque \033[34m\t\t| Digite 2 ");
 
     printf("\033[0m");
 
-    printf("\n\n• Visualizar produtos do cadastro manual \033[34m\t| Digite 3 ");
+    printf("\n\n• Cadastrar nova venda \033[34m\t\t\t\t| Digite 3 ");
     printf("\033[0m");
 
-    printf("\n\n• Cadastrar nova venda \033[34m\t\t\t\t| Digite 4 ");
+    printf("\n\n• Listar vendas \033[34m\t\t\t\t| Digite 4 ");
     printf("\033[0m");
 
-    printf("\n\n• Listar vendas \033[34m\t\t\t\t| Digite 5 ");
-    printf("\033[0m");
-
-    printf("\n\n• Salvar vendas em um arquivo \033[34m\t\t\t| Digite 6 ");
+    printf("\n\n• Salvar vendas em um arquivo \033[34m\t\t\t| Digite 5 ");
     printf("\033[0m");
 
     printf("\n\n• Sair \033[34m\t\t\t\t\t\t| Digite 0\n");

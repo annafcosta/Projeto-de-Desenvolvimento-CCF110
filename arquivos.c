@@ -16,9 +16,8 @@ void ler_arquivo_produtos(Cadastro_produto *produtos, int *numero_de_produtos)
 
     if (!fscanf(arquivo_produto, "%d", numero_de_produtos))
     {
-        printf("Deu erro");
+        printf("Deu erro!");
     }
-
 
     for (int i = 0; i < *numero_de_produtos; i++)
     {

@@ -49,22 +49,23 @@ void processar_venda(Cadastro_produto *produtos, Cadastro_venda *vendas,
 {
     if (FLAG_TESTE == 1)
     {
-
         produtos[produto_encontrado].quantidade -= quantidade_vendida;
 
         vendas[*num_vendas].codigo_produto_vendido = produtos[produto_encontrado].codigo;
         vendas[*num_vendas].quantidade_vendida = quantidade_vendida;
-        vendas[*num_vendas].valor_total = produtos[produto_encontrado].valor * quantidade_vendida;
+        vendas[*num_vendas].valor_total = produtos[produto_encontrado].valor 
+        * quantidade_vendida;
 
         printf("\033[0;33mVenda registrada com sucesso!\n");
         printf("\033[34mValor da venda: R$ %.2f\n", vendas[*num_vendas].valor_total);
     } else
-    { // Caso FLAG_TESTE == 0
+    { 
         atualizar_quantidade_produto(produtos, produto_encontrado, quantidade_vendida);
 
         vendas[*num_vendas].codigo_produto_vendido = produtos[produto_encontrado].codigo;
         vendas[*num_vendas].quantidade_vendida = quantidade_vendida;
-        vendas[*num_vendas].valor_total = produtos[produto_encontrado].valor * quantidade_vendida;
+        vendas[*num_vendas].valor_total = produtos[produto_encontrado].valor 
+        * quantidade_vendida;
 
         printf("\033[0;33mVenda registrada com sucesso!\n");
         printf("\033[34mValor da venda: R$ %.2f\n", vendas[*num_vendas].valor_total);
@@ -98,6 +99,14 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
             {
                 printf("Informe a quantidade vendida: ");
                 scanf("%d", &quantidade_vendida);
+
+                // Adiciona verificação para barrar números negativos
+                if (quantidade_vendida < 0)
+                {
+                    printf("\033[31m\nQuantidade inválida. Por favor, insira um valor não negativo.\n");
+                    printf("\033[0m");
+                 continue; 
+                }
 
                 printf("\n");
 
@@ -139,9 +148,11 @@ void cadastrar_venda(Cadastro_produto *produtos, int num_produtos,
                         // Verificar se o número de vendas não ultrapassa o limite máximo
                         if (*num_vendas < MAX_VENDAS)
                         {
-                            processar_venda(produtos, vendas, produto_encontrado, quantidade_vendida, num_vendas);
+                            processar_venda(produtos, vendas, produto_encontrado, quantidade_vendida, 
+                            num_vendas);
 
-                            printf("\033[34m\nQuantidade em estoque antes da venda: %d\n", quantidade_antes);
+                            printf("\033[34m\nQuantidade em estoque antes da venda: %d\n", 
+                                    quantidade_antes);
                             printf("\033[34mQuantidade em estoque após a venda: %d\n",
                                    produtos[produto_encontrado].quantidade);
 

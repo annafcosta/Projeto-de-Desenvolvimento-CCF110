@@ -36,7 +36,7 @@ int main()
     {
         do
         {
-            printf("Digite a quantidade de produtos que serão cadastrados no sistema: ");
+            printf("\n\nDigite a quantidade de produtos que serão cadastrados no sistema: ");
             scanf("%d", &qtd_produtos_para_cadastrar);
 
             if (qtd_produtos_para_cadastrar < 0)
@@ -48,7 +48,7 @@ int main()
 
     } else if (primeiro_opcao == 2)
     {
-        ler_arquivo_produtos(produtos, &qtd_atual_produtos); // Opção 2 do Menu
+        ler_arquivo_produtos(produtos, &qtd_atual_produtos); 
     }
 
     do
@@ -63,19 +63,19 @@ int main()
                 cadastrar_produtos(produtos, &qtd_atual_produtos, qtd_produtos_para_cadastrar);
                 break;
 
-            case 3: // Visualizar produtos:
+            case 2: // Visualizar produtos:
                 visualizar_produtos(produtos, qtd_atual_produtos);
                 break;
 
-            case 4: // Cadastrar vendas:
+            case 3: // Cadastrar vendas:
                 cadastrar_venda(produtos, MAX_PRODUTO, vendas, MAX_VENDAS, &num_vendas);
                 break;
 
-            case 5: // Visualizar vendas:
+            case 4: // Visualizar vendas:
                 visualizar_vendas(produtos, qtd_atual_produtos, vendas, num_vendas);
                 break;
 
-            case 6: // Salvar vendas em um arquivo:
+            case 5: // Salvar vendas em um arquivo:
                 salvar_vendas_em_arquivo(vendas, num_vendas, produtos, qtd_atual_produtos);
                 break;
 
