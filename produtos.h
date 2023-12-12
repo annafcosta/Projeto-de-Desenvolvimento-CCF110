@@ -24,6 +24,8 @@ void exibir_menu();
 
 void cadastrar_produtos(Cadastro_produto *produtos, int *num_produtos, int max_produto);
 
-void visualizar_produtos(Cadastro_produto *produtos, int num_produtos);
+void visualizar_produtos(Cadastro_produto *produtos, int *num_produtos);
+
+void ler_arquivo(Cadastro_produto *produtos);
 
 #endif

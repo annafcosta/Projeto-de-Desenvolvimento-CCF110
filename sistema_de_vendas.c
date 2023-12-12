@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 #include "vendas.h"
 #include "produtos.h"
 #include "arquivos.h"
+=======
+#include "vendas.c"
+>>>>>>> origin/main
 
 int main()
 {
@@ -58,6 +62,7 @@ int main()
         scanf("%d", &opcao);
 
         switch (opcao)
+<<<<<<< HEAD
         {
             case 1: // Cadastrar produtos:
                 cadastrar_produtos(produtos, &qtd_atual_produtos, qtd_produtos_para_cadastrar);
@@ -65,18 +70,40 @@ int main()
 
             case 2: // Visualizar produtos:
                 visualizar_produtos(produtos, qtd_atual_produtos);
+=======
+        { 
+            case 1: // Cadastrar produtos de maneira manual:
+                cadastrar_produtos(produtos, MAX_PRODUTO, &num_produtos);
                 break;
 
-            case 3: // Cadastrar vendas:
+            case 2: // Visualizar produtos:
+                visualizar_produtos(produtos, &num_produtos);
+>>>>>>> origin/main
+                break;
+
+            case 3: // Cadastrar produtos pelo arquivo:
+                ler_arquivo(produtos);
+                break;
+
+            case 4: // Cadastrar vendas:
                 cadastrar_venda(produtos, MAX_PRODUTO, vendas, MAX_VENDAS, &num_vendas);
                 break;
 
+<<<<<<< HEAD
             case 4: // Visualizar vendas:
                 visualizar_vendas(produtos, qtd_atual_produtos, vendas, num_vendas);
                 break;
 
             case 5: // Salvar vendas em um arquivo:
                 salvar_vendas_em_arquivo(vendas, num_vendas, produtos, qtd_atual_produtos);
+=======
+            case 5: // Visualizar vendas:
+                visualizar_vendas(produtos, num_produtos, vendas, num_vendas);
+                break;
+
+            case 6: // Salvar vendas em um arquivo:
+                salvar_vendas_em_arquivo(vendas, num_vendas, produtos, num_produtos);
+>>>>>>> origin/main
                 break;
 
             case 0:
