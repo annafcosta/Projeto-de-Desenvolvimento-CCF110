@@ -8,7 +8,7 @@
 void ler_arquivo_produtos(Cadastro_produto *produtos, int *numero_de_produtos)
 {
 
-    FILE *arquivo_produto = fopen("estoque.txt", "r");
+    FILE *arquivo_produto = fopen("src/txt/estoque.txt", "r");
 
     if (arquivo_produto == NULL)
     {
@@ -36,7 +36,7 @@ void ler_arquivo_produtos(Cadastro_produto *produtos, int *numero_de_produtos)
 // SALVAR AS VENDAS EM UM ARQUIVO TXT:
 void salvar_vendas_em_arquivo(Cadastro_venda *vendas, int num_vendas, Cadastro_produto *produtos, int num_produtos)
 {
-    FILE *arquivo = fopen("vendas.txt", "a");
+    FILE *arquivo = fopen("src/txt/vendas.txt", "a");
 
     if (arquivo == NULL)
     {
