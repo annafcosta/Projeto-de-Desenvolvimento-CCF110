@@ -4,8 +4,10 @@
 #include "produtos.h"
 #include "vendas.h"
 
+
 void ler_arquivo_produtos(Cadastro_produto *produtos, int *numero_de_produtos)
 {
+
     FILE *arquivo_produto = fopen("estoque.txt", "r");
 
     if (arquivo_produto == NULL)
@@ -72,13 +74,14 @@ void salvar_vendas_em_arquivo(Cadastro_venda *vendas, int num_vendas, Cadastro_p
         }
     } while (mes_da_venda < 0 || mes_da_venda > 12);
 
+    fprintf(arquivo, "\n=> VENDAS DO DIA: %d/%d\n", dia_da_venda, mes_da_venda);
+
     for (int i = 0; i < num_vendas; ++i)
     {
 
         int quantidade_restante = calcular_quantidade_restante(produtos, num_produtos, vendas[i]);
 
-        fprintf(arquivo, "\n=> VENDA DO DIA: %d/%d\n", dia_da_venda, mes_da_venda);
-        fprintf(arquivo, "\n- VENDA - %d\n", i + 1);
+        fprintf(arquivo, "\n- VENDA %d\n", i + 1);
         fprintf(arquivo, "CÓDIGO DO PRODUTO VENDIDO | %d\n", vendas[i].codigo_produto_vendido);
         fprintf(arquivo, "QUANTIDADE VENDIDA | %d\n", vendas[i].quantidade_vendida);
         fprintf(arquivo, "VALOR TOTAL | R$ %.2f\n", vendas[i].valor_total);

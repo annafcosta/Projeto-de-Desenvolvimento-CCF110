@@ -5,8 +5,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define FLAG_TESTE 0
-
 #define MAX_VENDAS 50
 #define MAX_PRODUTO 50
 
@@ -25,7 +23,5 @@ void exibir_menu();
 void cadastrar_produtos(Cadastro_produto *produtos, int *num_produtos, int max_produto);
 
 void visualizar_produtos(Cadastro_produto *produtos, int *num_produtos);
-
-void ler_arquivo(Cadastro_produto *produtos);
 
 #endif
