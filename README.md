@@ -63,7 +63,7 @@ ___
 
 ## 🟡 Futuras Implementações 
 
-* *Visualização do estoque:* Por meio da escolha do menu, será possível visualizar os produtos em estoque;
+* *Visualização do estoque:* Salvar em arquivo os produtos cadastrados de maneira manual;
 
 ## 🔵 Descrição de funcionamento
 
