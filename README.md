@@ -71,6 +71,18 @@ ___
   
    * Note que, a formatação é iniciada pelo nome do produto, seguido do valor, código e quantidade.
    * O atual sistema tem uma limitação em relação a leitura de espaços, por esse motivo, a formatação acima deve ser seguida.
+   * O arquivo deve ser iniciado com o número de produtos que terão no arquivo, uma vez, que o programa irá ler esse número e fazer o cadastro desses produtos limitando-se a esse valor.
+
+* *Compilar pelo terminal:* Utilize o seguinte comando caso vá compilar o código pelo terminal utilizando o gcc.
+
+```gcc
+gcc *seu_programa.c -o seu_programa
+```
+Para executar:
+```gcc
+./seu_programa
+```
+
 
 ## ⚪ Autores
 
