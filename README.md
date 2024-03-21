@@ -76,11 +76,11 @@ ___
 * *Compilar pelo terminal:* Utilize o seguinte comando caso compile o código pelo terminal utilizando o gcc.
 
 ```gcc
-gcc *seu_programa.c -o seu_programa
+gcc src/*.c -o main
 ```
 Para executar:
 ```gcc
-./seu_programa
+./main
 ```
 
 
