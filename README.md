@@ -30,10 +30,9 @@ ___
 
 * *Controle Financeiro:* Um dos objetivos do sistema é auxiliar os usuários a acompanharem suas receitas de vendas.
 
+<div id="implementacoes-existentes"> <!-- Seu conteúdo para Implementações Existentes --> </div>
 
 ## 🟢 Implementações Existentes
-
-<div id="implementacoes-existentes"> <!-- Seu conteúdo para Implementações Existentes --> </div>
 
 * *Menu Interativo:* O menu interativo foi desenvolvido de maneira que a navegação do usuário seja intuitiva. Além desse aspecto, foi adicionado cores para personalização das opções do menu, facilitando assim, a visualização e escolha do usuário. Abaixo estão as opções válidas, até o momento, para o Menu;
   * Cadastro de produtos no estoque;
