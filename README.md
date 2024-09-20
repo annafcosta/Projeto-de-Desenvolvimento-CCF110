@@ -66,7 +66,7 @@ ___
 * *Visualização do estoque:* Salvar em arquivo os produtos cadastrados de maneira manual;
 
 ## 🔵 Descrição de funcionamento
-<div id="descrição-de-funcionamento"> 
+<div id="descrição-de-funcionamento"></div>
 * *Criação de Arquivos:* A formatação de escrita do arquivo 'estoque.txt', deve seguir ser escrito da seguinte maneira 'Nome_do_Produto 2.25 005 18';
   
    * Note que, a formatação é iniciada pelo nome do produto, seguido do valor, código e quantidade.
@@ -74,7 +74,6 @@ ___
    * O arquivo deve ser iniciado com o número de produtos que terão no arquivo, uma vez, que o programa irá ler esse número e fazer o cadastro desses produtos limitando-se a esse valor.
 
 * *Compilar pelo terminal:* Utilize o seguinte comando caso compile o código pelo terminal utilizando o gcc.
-</div>
 
 ```gcc
 gcc src/*.c -o main
