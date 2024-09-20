@@ -8,38 +8,30 @@ ___
 
 **TAREFAS EM DESENVOLVIMENTO**
 
-🟣 [Objetivos](#Objetivos-1)
+🟣 [Objetivos](#objetivos)
+<div id="objetivos"> <!-- Seu conteúdo para Objetivos --> </div>
 
-<div id="Objetivos-1">
-<!-- Seu conteúdo para a Objetivos -->
-</div>
+🟢 [Implementações Existentes](#implementacoes-existentes)
 
-🟢 [Implementações Existentes](#implemen-4)
-<div id="implemen-4">
-<!-- Seu conteúdo para Autores -->
-</div>
+<div id="implementacoes-existentes"> <!-- Seu conteúdo para Implementações Existentes --> </div>
 
-🟡  [Futuras Implementações](#implementar-3)
+🟡 [Futuras Implementações](#futuras-implementacoes)
 
-<div id="implementar-3">
-<!-- Seu conteúdo para Autores -->
-</div>
+<div id="futuras-implementacoes"> <!-- Seu conteúdo para Futuras Implementações --> </div>
 
 🔵 [Descrição de Funcionamento](#descricao-de-funcionamento)
 
-<div id="descricao-de-funcionamento">
-<!-- Seu conteúdo para Descrição de Funcionamento -->
-</div>
+<div id="descricao-de-funcionamento"> <!-- Seu conteúdo para Descrição de Funcionamento --> </div>
 
-⚪ [Autores](#autores-3)
+⚪ [Autores](#autores)
 
-<div id="autores-3">
-<!-- Seu conteúdo para Autores -->
-</div>
+<div id="autores"> <!-- Seu conteúdo para Autores --> </div>
 
 ___
 
 ## 🟣 Objetivos:
+
+<div id="objetivos"></div>
 
 * *Eficiência Operacional:* O principal objetivo do sistema é melhorar a eficiência operacional, automatizando tarefas repetitivas, como controle de estoque e registro de vendas;
 
