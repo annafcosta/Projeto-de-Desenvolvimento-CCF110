@@ -72,7 +72,6 @@ Para executar:
 ./main
 ```
 
-
 ## ⚪ Autores
 
 <div id="autores"><!-- Seu conteúdo para Autores --></div>
