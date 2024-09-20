@@ -21,8 +21,6 @@ ___
 
 🔵 [Descrição de Funcionamento](#descricao-de-funcionamento)
 
-<div id="descricao-de-funcionamento"> <!-- Seu conteúdo para Descrição de Funcionamento --> </div>
-
 ⚪ [Autores](#autores)
 
 ___
