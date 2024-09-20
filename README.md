@@ -25,9 +25,9 @@ ___
 <!-- Seu conteúdo para Autores -->
 </div>
 
-🔵 [Descrição de Funcionamento](#descrição-de-funcionamento)
+🔵 [Descrição de Funcionamento](#descricao-de-funcionamento)
 
-<div id="descrição-de-funcionamento">
+<div id="descricao-de-funcionamento">
 <!-- Seu conteúdo para Descrição de Funcionamento -->
 </div>
 
@@ -68,7 +68,7 @@ ___
 
 ## 🔵 Descrição de funcionamento
 
-<div id="descrição-de-funcionamento"> <!-- Conteúdo da seção de Descrição de Funcionamento --> </div>
+<div id="descricao-de-funcionamento"></div>
 
 * *Criação de Arquivos:* A formatação de escrita do arquivo 'estoque.txt', deve seguir ser escrito da seguinte maneira 'Nome_do_Produto 2.25 005 18';
   
