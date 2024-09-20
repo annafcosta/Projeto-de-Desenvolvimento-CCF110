@@ -9,15 +9,10 @@ ___
 **TAREFAS EM DESENVOLVIMENTO**
 
 🟣 [Objetivos](#objetivos)
-<div id="objetivos"> <!-- Seu conteúdo para Objetivos --> </div>
 
 🟢 [Implementações Existentes](#implementacoes-existentes)
 
-<div id="implementacoes-existentes"> <!-- Seu conteúdo para Implementações Existentes --> </div>
-
 🟡 [Futuras Implementações](#futuras-implementacoes)
-
-<div id="futuras-implementacoes"> <!-- Seu conteúdo para Futuras Implementações --> </div>
 
 🔵 [Descrição de Funcionamento](#descricao-de-funcionamento)
 
@@ -38,6 +33,8 @@ ___
 
 ## 🟢 Implementações Existentes
 
+<div id="implementacoes-existentes"> <!-- Seu conteúdo para Implementações Existentes --> </div>
+
 * *Menu Interativo:* O menu interativo foi desenvolvido de maneira que a navegação do usuário seja intuitiva. Além desse aspecto, foi adicionado cores para personalização das opções do menu, facilitando assim, a visualização e escolha do usuário. Abaixo estão as opções válidas, até o momento, para o Menu;
   * Cadastro de produtos no estoque;
   * Visualização de produtos;
@@ -50,6 +47,8 @@ ___
 * *Visualização das vendas:* Na última atualização, a opção de visualizar as vendas foi implementada. Dessa forma, é possível visualizar o valor total da venda de cada produto.
 
 ## 🟡 Futuras Implementações 
+
+<div id="futuras-implementacoes"> <!-- Seu conteúdo para Futuras Implementações --> </div>
 
 * *Visualização do estoque:* Salvar em arquivo os produtos cadastrados de maneira manual;
 
