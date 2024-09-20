@@ -79,7 +79,7 @@ Para executar:
 
 ## ⚪ Autores
 
-<div id="autores-3"><!-- Seu conteúdo para Autores --></div>
+<div id="autores"><!-- Seu conteúdo para Autores --></div>
 
 Anna Lúisa Ferreira Costa (4409). [[User-GitHub]](https://github.com/annafcosta)
 
