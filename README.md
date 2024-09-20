@@ -25,8 +25,6 @@ ___
 
 ⚪ [Autores](#autores)
 
-<div id="autores"> <!-- Seu conteúdo para Autores --> </div>
-
 ___
 
 ## 🟣 Objetivos:
